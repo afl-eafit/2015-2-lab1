@@ -1,4 +1,4 @@
--- | Two-way deterministic finite automata
+-- | Alternating finite automata
 module Data.Automata.AFA
   ( AFA(AFA, delta, initial, states, symbols, finals)
   , S(SA,SE)
