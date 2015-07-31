@@ -17,7 +17,7 @@ m = AFA (fromList [SE Q0, SA Q1, SE Q2])
     where
       deltaM :: S StateM -> SymbolM -> Set (S StateM)
       deltaM (SE Q0) A = singleton (SE Q0)
-      deltaM (SE Q0) B = fromList [SA Q1,SE Q0]
-      deltaM (SA Q1) A = fromList [SE Q0,SE Q2]
+      deltaM (SE Q0) B = fromList  [SA Q1,SE Q0]
+      deltaM (SA Q1) A = singleton (SE Q2)
       deltaM (SA Q1) B = fromList [SA Q1,SE Q2]
       deltaM _       _ = empty
