@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Simulating an alternating finite automaton</title>
+  </head>
+
+<body>
+  <div style="text-align: center;">
+    <h1>Programming lab 1: Simulating an alternating finite
+    automaton</h1>
+
+    <p><b>Submission deadline: Friday, August 21, 2015 (11:59 p.m.)</b></p>
+  </div>
+
+  <h3>Introduction</h3>
+
+  <div style="text-align: left;">
+    <p>The aim of this programming lab is to simulate an alternating
+    finite automaton using Haskell.</p>
+  </div>
+
+  <h3>Assignment (80%)</h3>
+
+  <ul style="text-align: left;">
+    <li>Download the <a href="https://github.com/">GitHub</a> repository
+    <a href=
+    "https://github.com/afl-eafit/2015-2-lab1">2015-2-lab1</a>.
+
+      <ul>
+        <li>The module <code>Data.Automata.AFA</code> implements
+        an alternating finite automata.</li>
+
+        <li>The module <code>Data.Automata.AFA.Examples</code> gives an
+        example of the data type <code>AFA</code>.</li>
+      </ul>
+    </li>
+
+    <li>(70%) Using the module <code>Data.Automata.AFA</code>, define a
+    function
+      <pre>
+          accepts :: AFA state symbol -&gt; [symbol] -&gt; Bool
+</pre>that tests whether an alternating finite automaton accepts or
+rejects an input word.
+
+      <ul>
+        <li>Using the module <code>Data.Automata.AFA.Examples</code>, for
+        example, <code>accepts m [A, A] = False</code>.</li>
+      </ul>
+    </li>
+
+    <li>(10%) Annotate your source code using Haddock. Documentation should
+    explain your solution for the assignment.</li>
+  </ul>
+
+  <h3>Clean code (10%)</h3>
+
+  <div style="text-align: left;">
+    Before submitting your code, clean it up! Clean code:
+
+    <ul>
+      <li>Does not have long lines (at most 80 columns).</li>
+
+      <li>Has a consistent layout.</li>
+
+      <li>Has type signatures for everything.</li>
+
+      <li>Has good comments.</li>
+
+      <li>Has no junk (unused code, commented code, unnecessary code).</li>
+
+      <li>Has no overly complicated function definitions.</li>
+
+      <li>Does not contain any repetitive code.</li>
+    </ul>
+  </div>
+
+  <h3>Submission (10%)</h3>
+
+  <div style="text-align: left;">
+    <p>Submission is electronic. Send an email to
+    <tt>asicard(at)eafit(dot)edu(dot)co</tt> and
+    <tt>agomezl(at)eafit(dot)edu(dot)co</tt> and attach a compressed file
+    (.zip or .tar.gz) with your solution.</p>
+
+    <p>Your submission has to include the following:</p>
+
+    <ul>
+      <li><tt>SimAFA.hs</tt>, a Haskell module file with your solution for
+      the assignment.</li>
+
+      <li>
+        <tt>README</tt> (or <tt>README.md</tt>), a file containing at least
+        the following information.
+
+        <ul>
+          <li>The name of your program.</li>
+
+          <li>Your name(s).</li>
+
+          <li>A general description of your program.</li>
+
+          <li>Information on how to use your program.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <h3>Notes</h3>
+
+  <ul style="text-align: left;">
+    <li>The programming lab may either be solved on your own, or jointly with
+    one other student taking the course.</li>
+
+    <li>You are to use the Haskell Platform 2014.2.0.0 or GHCi ≥ 7.8.3.</li>
+
+    <li>You can add class constraints to the type signature of
+    <code>accepts</code> if you need them.</li>
+  </ul>
+
+  <h3>Bibliography</h3>
+
+<ul style="text-align: justify;">
+  <li>Chinmay Narayan, Shibashis Guha and S.Arun-Kumar.
+    <em>From Traces To Proofs: Proving Concurrent Program Safe</em>. CoRR, 2015.
+    Section 2.3. <a href="http://arxiv.org/pdf/1506.07635v1.pdf"> pdf</a>.</li>
+
+</ul>
+
+  <hr/>
+
+  <table style="width:100%">
+    <tr>
+      <td><a href=
+             "http://www1.eafit.edu.co/asr/courses/automata-CM0081/">Automata
+      and formal languages - CM0081</a></td>
+
+      <td style="text-align:right;"><a
+        href="http://validator.w3.org/check?uri=referer"><img
+        src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML
+        1.1" height="31" width="88" /></a></td>
+    </tr>
+  </table>
+
+</body>
+</html>
