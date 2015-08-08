@@ -4,12 +4,12 @@ import Data.Automata.AFA (AFA(..),S(..))
 
 import Data.Set (Set, fromList, singleton, empty )
 
-data StateM = Q0 | Q1 | Q2 deriving (Eq, Ord)
+data StateM = Q0 | Q1 | Q2 | Q3 | Q4 deriving (Eq, Ord)
 
-data SymbolM = A | B deriving (Eq, Ord)
+data SymbolM = A | B | C | D deriving (Eq, Ord, Show)
 
-m :: AFA StateM SymbolM
-m = AFA (fromList [SE Q0, SA Q1, SE Q2])
+m1 :: AFA StateM SymbolM
+m1 = AFA (fromList [SE Q0, SA Q1, SE Q2])
         (fromList [A,B])
         deltaM
         (SE Q0)
