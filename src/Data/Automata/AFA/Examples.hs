@@ -21,3 +21,9 @@ m1 = AFA (fromList [SE Q0, SA Q1, SE Q2])
       deltaM (SA Q1) A = singleton (SE Q2)
       deltaM (SA Q1) B = fromList [SA Q1,SE Q2]
       deltaM _       _ = empty
+
+m2 :: AFA StateM SymbolM
+m2 = AFA  (singleton $ SE Q0) empty (\_ _ -> empty) (SE Q0) empty
+
+m3 :: AFA StateM SymbolM
+m3 = AFA (singleton $ SE Q0)  empty (\_ _ -> empty) (SE Q0) (singleton $ SE Q0)
