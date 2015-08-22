@@ -29,10 +29,11 @@ m3 :: AFA StateM SymbolM
 m3 = AFA (singleton $ SE Q0)  empty (\_ _ -> empty) (SE Q0) (singleton $ SE Q0)
 
 m4 :: AFA Int Int
-m4 AFA (fromList [SE 0,SE 1,SE 2,SE 3])
-       (fromList [0..])
-       deltaM
-       (singleton  (SE 3))
+m4 = AFA (fromList [SE 0,SE 1,SE 2,SE 3])
+         (fromList [0..])
+         (deltaM)
+         (SE 0)
+         (singleton  (SE 3))
     where
       deltaM :: S Int -> Int -> Set (S Int)
       deltaM (SE 0) 0 = fromList [SE 0, SE 1]
