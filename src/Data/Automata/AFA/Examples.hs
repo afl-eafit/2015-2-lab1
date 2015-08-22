@@ -30,7 +30,7 @@ m3 = AFA (singleton $ SE Q0)  empty (\_ _ -> empty) (SE Q0) (singleton $ SE Q0)
 
 m4 :: AFA Int Int
 m4 = AFA (fromList [SE 0,SE 1,SE 2,SE 3])
-         (fromList [0..])
+         (fromList [0,1,2])
          (deltaM)
          (SE 0)
          (singleton  (SE 3))
@@ -39,4 +39,18 @@ m4 = AFA (fromList [SE 0,SE 1,SE 2,SE 3])
       deltaM (SE 0) 0 = fromList [SE 0, SE 1]
       deltaM (SE 1) 1 = fromList [SE 1, SE 2]
       deltaM (SE 2) 2 = fromList [SE 2, SE 3]
+      deltaM _      _ = empty
+
+m5 :: AFA Int Int
+m5 = AFA (fromList [SA 0,SA 1,SA 2])
+         (fromList [0,1])
+         (deltaM)
+         (SA 0)
+         (fromList [SA 1,SA 2])
+    where
+      deltaM :: S Int -> Int -> Set (S Int)
+      deltaM (SA 0) 0 = singleton (SA 0)
+      deltaM (SA 0) 1 = fromList [SA 1,SA 2]
+      deltaM (SA 1) 1 = fromList [SA 1,SA 2]
+      deltaM (SA 2) 1 = fromList [SA 1,SA 2]
       deltaM _      _ = empty
